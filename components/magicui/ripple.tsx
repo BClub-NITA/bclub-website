@@ -1,11 +1,11 @@
-import React, { CSSProperties } from "react";
+import { CSSProperties, memo } from "react";
 
 // Modify these
 const MAIN_CIRCLE_SIZE = 350;
 const MAIN_CIRCLE_OPACITY = 0.28;
 const NUM_CIRCLES = 8;
 
-const Ripple = React.memo(() => {
+const Ripple = memo(() => {
   return (
     <div className="absolute left-1/2 top-1/2 h-full w-full overflow-visible">
       {Array.from({ length: NUM_CIRCLES }, (_, i) => (
@@ -25,5 +25,7 @@ const Ripple = React.memo(() => {
     </div>
   );
 });
+
+Ripple.displayName = 'Ripple';
 
 export default Ripple;

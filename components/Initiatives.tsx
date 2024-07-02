@@ -28,6 +28,7 @@ export default function Initiatives() {
           {initiatives.map((item, index) => {
             return (
               <InitiativesTiles
+                key={index}
                 title={item.title}
                 description={item.description}
                 id={index}
